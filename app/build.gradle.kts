@@ -59,7 +59,7 @@ androidComponents {
 
             val baseName = "T2SSH"
             val buildType = variant.buildType ?: "release"
-            val versionName = android.defaultConfig.versionName ?: "2.0"
+            val versionName = android.defaultConfig.versionName ?: "1.1"
 
             output.outputFileName.set("${baseName}-${buildType}-${abiName}-v${versionName}.apk")
         }
