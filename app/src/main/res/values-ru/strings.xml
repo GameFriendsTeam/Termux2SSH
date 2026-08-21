@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Termux2SSH</string>
     <string name="app_title">Termux2SSH</string>
-    <string name="app_description">Открывает sh:// в Termux</string>
+    <string name="app_description">Открывает ssh:// в Termux</string>
     <string name="req_perm">Запросить права</string>
     <string name="toggle_theme">Переключить тему</string>
 
@@ -13,6 +13,6 @@
     <string name="termux_installed">✅ Termux найден</string>
     <string name="termux_not_installed">❌ Termux не найден</string>
 
-    <string name="has_perm">✅ RUN_COMMAND разрещён</string>
+    <string name="has_perm">✅ RUN_COMMAND разрешно </string>
     <string name="hasnt_perm">⚠️ RUN_COMMAND запрещён</string>
 </resources>
