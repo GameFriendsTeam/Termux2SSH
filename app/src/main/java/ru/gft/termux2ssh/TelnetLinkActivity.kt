@@ -7,9 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
-class SshLinkActivity : AppCompatActivity() {
-
-    private var pendingArgs: ArrayList<String>? = null
+class TelnetLinkActivity : AppCompatActivity() {
+    private var pendingArgs:ArrayList<String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,14 +16,14 @@ class SshLinkActivity : AppCompatActivity() {
         val uri: Uri? = intent?.data
         if (uri == null) { finish(); return }
 
-        val args = buildSshArgs(uri)
+        val args = buildTelnetArgs(uri)
 
         if (ContextCompat.checkSelfPermission(this, "com.termux.permission.RUN_COMMAND")
             != PackageManager.PERMISSION_GRANTED) {
             pendingArgs = args
             ActivityCompat.requestPermissions(this, arrayOf("com.termux.permission.RUN_COMMAND"), 1)
         } else {
-            TermuxHelper.sendToTermux(this, this, "ssh", args)
+            TermuxHelper.sendToTermux(this, this, "telnet", args)
             finish()
         }
     }
@@ -33,20 +32,23 @@ class SshLinkActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         TermuxHelper.onRequestPermissionsResult(
-            this, this, "ssh", pendingArgs, requestCode, permissions, grantResults
+            this, this, "telnet", pendingArgs, requestCode, permissions, grantResults
         )
     }
 
 
-    private fun buildSshArgs(uri: Uri): ArrayList<String> {
+    private fun buildTelnetArgs(uri: Uri): ArrayList<String> {
         val args = ArrayList<String>()
+        val userInfo = uri.userInfo
+        if (!userInfo.isNullOrEmpty()) {
+            args.add("-l")
+            args.add(userInfo)
+        }
+        val host = uri.host ?: ""
+        args.add(host)
         if (uri.port != -1) {
-            args.add("-p")
             args.add(uri.port.toString())
         }
-        val userInfo = uri.userInfo
-        val host = uri.host ?: ""
-        args.add(if (!userInfo.isNullOrEmpty()) "$userInfo@$host" else host)
         return args
     }
 }

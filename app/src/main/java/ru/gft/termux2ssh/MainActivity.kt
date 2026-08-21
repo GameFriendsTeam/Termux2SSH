@@ -1,8 +1,6 @@
 package ru.gft.termux2ssh
 
-import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -26,9 +24,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-//        findViewById<Button>(R.id.btnTest).setOnClickListener {
-//            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("ssh://test@192.168.1.10:22")))
-//        }
     }
 
     override fun onResume() {
