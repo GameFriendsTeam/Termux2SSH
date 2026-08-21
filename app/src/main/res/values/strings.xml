@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Termux2SSH</string>
+    <string name="app_title">Termux2SSH</string>
+    <string name="app_description">Open ssh:// with using Termux</string>
+    <string name="req_perm">request permission</string>
+    <string name="toggle_theme">toggle theme</string>
+
+    <string name="thm_btn_sys">System theme</string>
+    <string name="thm_btn_dark">Dark theme</string>
+    <string name="thm_btn_light">Light theme</string>
+
+    <string name="termux_installed">✅ Termux has been installed</string>
+    <string name="termux_not_installed">❌ Termux not found</string>
+
+    <string name="has_perm">✅ has RUN_COMMAND permission</string>
+    <string name="hasnt_perm">⚠️ RUN_COMMAND permission denied</string>
 </resources>
