@@ -12,6 +12,6 @@
     <string name="termux_installed">✅ Termux has been installed</string>
     <string name="termux_not_installed">❌ Termux not found</string>
 
-    <string name="has_perm">✅ has RUN_COMMAND permission</string>
+    <string name="has_perm">✅ RUN_COMMAND permission granted</string>
     <string name="hasnt_perm">⚠️ RUN_COMMAND permission denied</string>
 </resources>

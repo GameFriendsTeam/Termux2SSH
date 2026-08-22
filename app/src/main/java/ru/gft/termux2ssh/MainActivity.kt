@@ -1,8 +1,11 @@
 package ru.gft.termux2ssh
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -13,7 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var tvStatus: TextView
     private lateinit var btnTheme: Button
+    private lateinit var infoBtn: ImageButton
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         applySavedTheme()
         super.onCreate(savedInstanceState)
@@ -21,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         tvStatus = findViewById(R.id.tvStatus)
         btnTheme = findViewById(R.id.btnTheme)
+        infoBtn = findViewById(R.id.infoBtn)
 
         findViewById<Button>(R.id.btnGrant).setOnClickListener {
             ActivityCompat.requestPermissions(
@@ -39,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             prefs.edit().putInt(KEY_THEME, next).apply()
             AppCompatDelegate.setDefaultNightMode(next)
             updateThemeButton()
+        }
+
+        infoBtn.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
         }
     }
 

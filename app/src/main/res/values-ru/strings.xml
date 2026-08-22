@@ -13,6 +13,6 @@
     <string name="termux_installed">✅ Termux найден</string>
     <string name="termux_not_installed">❌ Termux не найден</string>
 
-    <string name="has_perm">✅ RUN_COMMAND разрешно </string>
+    <string name="has_perm">✅ RUN_COMMAND разрешён</string>
     <string name="hasnt_perm">⚠️ RUN_COMMAND запрещён</string>
 </resources>
