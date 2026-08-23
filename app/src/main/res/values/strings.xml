@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Termux2SSH</string>
     <string name="app_title">Termux2SSH</string>
-    <string name="app_description">Open ssh:// with using Termux</string>
-    <string name="req_perm">request permission</string>
-    <string name="toggle_theme">toggle theme</string>
+    <string name="app_description">Open ssh links Termux</string>
+    <string name="req_perm">Request permission</string>
+    <string name="toggle_theme">Toggle theme</string>
 
     <string name="thm_btn_sys">System theme</string>
     <string name="thm_btn_dark">Dark theme</string>
@@ -14,4 +14,14 @@
 
     <string name="has_perm">✅ RUN_COMMAND permission granted</string>
     <string name="hasnt_perm">⚠️ RUN_COMMAND permission denied</string>
+
+    <string name="about_info">The program is designed to redirect SSH, FTP, and Telnet links in Termux.\n
+        For the application to work correctly, you must have Termux installed, configure Termux to allow commands from external applications,\n
+         and grant this application the com.termux.RUN_COMMAND permission.\n
+        To use SSH, you must install the openssh package (usually already installed in Termux).\n
+        To use FTP and Telnet, you must install the inetutils package.\n
+    </string>
+    <string name="install_packs">Install packages</string>
+    <string name="copyright_main">Copyright (c) 2026 GameFriendsTeam.</string>
+    <string name="copyright_detail">The software is distributed under a MIT License.</string>
 </resources>

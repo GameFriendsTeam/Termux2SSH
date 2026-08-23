@@ -31,9 +31,15 @@ class FTPLinkActivity : AppCompatActivity() {
             requestCode: Int, permissions: Array<out String>, grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        TermuxHelper.onRequestPermissionsResult(
+
+        if (ContextCompat.checkSelfPermission(this, "com.termux.permission.RUN_COMMAND")
+            != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf("com.termux.permission.RUN_COMMAND"), 1)
+        } else {
+            TermuxHelper.onRequestPermissionsResult(
                 this, this, "ftp", pendingArgs, requestCode, permissions, grantResults
-        )
+            )
+        }
     }
 
 

@@ -102,5 +102,10 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val PREFS_NAME = "ui_prefs"
         private const val KEY_THEME = "night_mode"
+
+
+        val github_link = "http://github.com/GameFriendsTeam"
+
+        val tg_link = "https://t.me/gft_team_channel"
     }
 }

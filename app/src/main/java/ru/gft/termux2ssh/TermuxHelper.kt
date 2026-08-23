@@ -26,6 +26,11 @@ class TermuxHelper {
             }
         }
 
+        fun sendsToTermux(activity: Activity, context: Context, commands: List<String>) {
+            val script = commands.joinToString(" && ")
+            sendToTermux(activity, context, "bash", arrayListOf("-lc", script))
+        }
+
 
         fun onRequestPermissionsResult(
             activity: Activity, context: Context, run_exec: String, pendingArgs: ArrayList<String>?,

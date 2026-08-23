@@ -61,9 +61,9 @@
             android:adjustViewBounds="true"
             android:background="#00FFFFFF"
             android:cropToPadding="false"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:srcCompat="@android:drawable/ic_info"
-            tools:visibility="invisible" />
+            tools:visibility="visible" />
 
     </LinearLayout>
 
