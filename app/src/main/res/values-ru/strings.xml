@@ -24,6 +24,6 @@
         Для работы ftp, telnet нужно установить пакет inetutils.\n
     </string>
     <string name="install_packs">Установить пакеты</string>
-    <string name="copyright_main">Авторские права (c) 2026 GameFriendsTeam.</string>
+    <string name="copyright_main">Авторские права © 2026 GameFriendsTeam.</string>
     <string name="copyright_detail">ПО распространяется на условиях MIT лицензии.</string>
 </resources>

@@ -22,6 +22,6 @@
         To use FTP and Telnet, you must install the inetutils package.\n
     </string>
     <string name="install_packs">Install packages</string>
-    <string name="copyright_main">Copyright (c) 2026 GameFriendsTeam.</string>
+    <string name="copyright_main">Copyright © 2026 GameFriendsTeam.</string>
     <string name="copyright_detail">The software is distributed under a MIT License.</string>
 </resources>
