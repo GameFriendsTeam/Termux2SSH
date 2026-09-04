@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
         private const val KEY_THEME = "night_mode"
 
 
-        val github_link = "http://github.com/GameFriendsTeam"
+        val github_link = "https://github.com/GameFriendsTeam"
 
         val tg_link = "https://t.me/gft_team_channel"
     }
